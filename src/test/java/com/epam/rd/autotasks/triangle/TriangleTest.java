@@ -65,14 +65,14 @@ class TriangleTest {
 
     @ParameterizedTest
     @MethodSource
-    private void testArea(final double expected, final double ax, final double ay, final double bx, final double by, final double cx, final double cy) {
+    void testArea(final double expected, final double ax, final double ay, final double bx, final double by, final double cx, final double cy) {
         final Triangle t = t(ax, ay, bx, by, cx, cy);
         assertEquals(expected, t.area(), 0.0001, () -> "Error in area() on case " + triangleToString(ax, ay, bx, by, cx, cy));
     }
 
     @ParameterizedTest
     @MethodSource
-    private void testCentroid(final double ax, final double ay, final double bx, final double by, final double cx, final double cy, final Point expected) {
+    void testCentroid(final double ax, final double ay, final double bx, final double by, final double cx, final double cy, final Point expected) {
         final Triangle t = t(ax, ay, bx, by, cx, cy);
         assertEquals(expected.getX(), t.centroid().getX(), 0.0001, () -> "Error in centroid() on case (X) " + triangleToString(ax, ay, bx, by, cx, cy));
         assertEquals(expected.getY(), t.centroid().getY(), 0.0001, () -> "Error in centroid() on case (Y) " + triangleToString(ax, ay, bx, by, cx, cy));
