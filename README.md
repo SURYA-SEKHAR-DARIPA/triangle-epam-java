@@ -9,7 +9,7 @@ Estimated workload of this exercise is _45 min_.
 Please, implement methods of class [`Triangle`](src/main/java/com/epam/rd/autotasks/triangle/Triangle.java):
 
 * constructor, which has three points as parameters.\
-  Make sure that these points refer to vertices of the triangle.\
+  Consider these points as vertices of the triangle.\
   Ensure that the created triangle exists and it is not degenerative.\
   If it is, use `throw new IllegalArgumentException()` to raise an error.
 * `double area()`\
